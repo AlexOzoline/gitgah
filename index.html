@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls in the Garden & Girls in the Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .logo-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .logo-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .logo {
+            width: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .logo-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .garden-icon {
+            animation-delay: 0s;
+        }
+
+        .home-icon {
+            animation-delay: 1.5s;
+        }
+
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            line-height: 1.2;
+            color: #667eea; /* Fallback for older browsers */
+        }
+
+        .garden-text {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: #43e97b; /* Fallback */
+        }
+
+        .home-text {
+            background: linear-gradient(135deg, #fa709a, #fee140);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: #fa709a; /* Fallback */
+        }
+
+        .tagline {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+
+            .logos-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .logo-card {
+                padding: 40px 30px;
+            }
+
+            .logo-icon {
+                font-size: 80px;
+            }
+
+            .logo-text {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Garden & Home Services</h1>
+        
+        <div class="logos-container">
+            <a href="https://girlsinthegarden.com.au" class="logo-link" target="_blank" rel="noopener noreferrer">
+                <div class="logo-card">
+                    <div class="logo">
+                        <div class="logo-icon garden-icon">🌸</div>
+                        <div class="logo-text garden-text">Girls in the<br>Garden</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://girlsinthehome.com.au" class="logo-link" target="_blank" rel="noopener noreferrer">
+                <div class="logo-card">
+                    <div class="logo">
+                        <div class="logo-icon home-icon">🏡</div>
+                        <div class="logo-text home-text">Girls in the<br>Home</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="cta-container">
+            <a href="#" class="cta-button">Get Started Today</a>
+        </div>
+    </div>
+</body>
+</html>
